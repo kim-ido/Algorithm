@@ -1,9 +1,12 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
+        public static void main(String[] args) throws IOException {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
             int king = 1;
             int queen = 1;
             int rook = 2;
@@ -11,12 +14,13 @@ public class Main {
             int knight = 2;
             int pawn = 8;
 
-            king = king - sc.nextInt();
-            queen = queen - sc.nextInt();
-            rook = rook - sc.nextInt();
-            bishop = bishop - sc.nextInt();
-            knight = knight - sc.nextInt();
-            pawn = pawn - sc.nextInt();
+            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+            king = king - Integer.parseInt(st.nextToken());
+            queen = queen - Integer.parseInt(st.nextToken());;
+            rook = rook - Integer.parseInt(st.nextToken());;
+            bishop = bishop - Integer.parseInt(st.nextToken());;
+            knight = knight - Integer.parseInt(st.nextToken());;
+            pawn = pawn - Integer.parseInt(st.nextToken());;
 
             System.out.print(king + " ");
             System.out.print(queen + " ");
@@ -25,5 +29,4 @@ public class Main {
             System.out.print(knight + " ");
             System.out.print(pawn);
         }
-
 }
