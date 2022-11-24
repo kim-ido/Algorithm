@@ -23,8 +23,7 @@ public class Main {
                 for (int k = j + 1; k < n; k++) {
                     int sum = arr[i] + arr[j] + arr[k];
 
-                    if (temp < sum && sum <= m)
-                        temp = sum;
+                    if (temp < sum && sum <= m) temp = sum;
                 }
             }
         }
