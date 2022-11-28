@@ -11,7 +11,7 @@ public class Main {
 
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-        int temp = 0;
+        int tmp = 0;
         int[] arr = new int[n];
 
         st = new StringTokenizer(br.readLine(), " ");
@@ -23,10 +23,10 @@ public class Main {
                 for (int k = j + 1; k < n; k++) {
                     int sum = arr[i] + arr[j] + arr[k];
 
-                    if (temp < sum && sum <= m) temp = sum;
+                    if (tmp < sum && sum <= m) tmp = sum;
                 }
             }
         }
-        System.out.println(temp);
+        System.out.println(tmp);
     }
 }
