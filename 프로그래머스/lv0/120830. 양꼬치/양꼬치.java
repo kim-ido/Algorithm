@@ -4,6 +4,6 @@ class Solution {
             if (i % 10 == 0) k--;
         }
         
-        return (n*12000) + (k*2000 + 2000);
+        return n*12000 + k*2000 + 2000;
     }
 }
