@@ -6,6 +6,6 @@ class Solution {
             answer += numbers[i];
         }
             
-        return answer /= numbers.length ;
+        return answer / numbers.length ;
     }
 }
