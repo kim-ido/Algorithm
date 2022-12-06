@@ -9,20 +9,21 @@ class Solution {
         for (int i = 0; i < array.length; i++) {
             arr[array[i]]++;
         }
-        
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > max) {
                 max = arr[i];
                 maxIndex = i;
             }
         }
-        
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == max) cnt++;
         }
         
-        if (cnt > 1) return -1;
-        answer = maxIndex;
-        return answer;
+        if (cnt > 1) {
+            return -1;
+        } else {
+            answer = maxIndex;
+            return answer;
+        }
     }
 }
