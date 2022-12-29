@@ -1,9 +1,9 @@
 import java.io.*;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
 
-    public static int[][] board;
+    public static int[][] BOARD;
     public static int MINUS_ONE;
     public static int ZERO;
     public static int PLUS_ONE;
@@ -11,13 +11,13 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        board = new int[N][N];
+        BOARD = new int[N][N];
         StringTokenizer st;
 
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
-                board[i][j] = Integer.parseInt(st.nextToken());
+                BOARD[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
@@ -30,9 +30,9 @@ public class Main {
 
     public static void partition(int row, int col, int size) {
         if (numCheck(row, col, size)) {
-            if (board[row][col] == -1) {
+            if (BOARD[row][col] == -1) {
                 MINUS_ONE++;
-            } else if (board[row][col] == 0) {
+            } else if (BOARD[row][col] == 0) {
                 ZERO++;
             } else {
                 PLUS_ONE++;
@@ -55,11 +55,11 @@ public class Main {
     }
 
     public static boolean numCheck(int row, int col, int size) {
-        int num = board[row][col];
+        int num = BOARD[row][col];
 
         for (int i = row; i < row + size; i++) {
             for (int j = col; j < col + size; j++) {
-                if (num != board[i][j]) {
+                if (num != BOARD[i][j]) {
                     return false;
                 }
             }
